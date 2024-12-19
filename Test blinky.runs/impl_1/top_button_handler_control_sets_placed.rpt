@@ -1,0 +1,104 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Thu Dec 19 12:16:51 2024
+| Host         : DESKTOP-3I70GQ5 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_button_handler_control_sets_placed.rpt
+| Design       : top_button_handler
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    26 |
+|    Minimum number of control sets                        |    26 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    66 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    26 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    11 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     8 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               7 |            5 |
+| No           | No                    | Yes                    |              46 |           24 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              14 |            6 |
+| Yes          | No                    | Yes                    |             379 |          166 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------------+------------------+------------------+----------------+--------------+
+|  Clock Signal  |         Enable Signal         | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-------------------------------+------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | lcd_inst/en_i_1_n_0           | rst_IBUF         |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | lcd_inst/state                | rst_IBUF         |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | led[3]_P_i_1_n_0              |                  |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | lcd_inst/char_index           | rst_IBUF         |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG |                               |                  |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG | db0/button_flag_reg_1         | rst_IBUF         |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | count_down[7]_i_1_n_0         | rst_IBUF         |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | db1/button_flag_reg_3[0]      | rst_IBUF         |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | db1/E[0]                      | rst_IBUF         |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | db1/button_flag_reg_4[0]      | rst_IBUF         |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | db1/button_flag_reg_5[0]      | rst_IBUF         |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | db2/selected_product_reg[2]_0 | rst_IBUF         |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | db2/selected_product_reg[2]_1 | rst_IBUF         |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | db2/selected_product_reg[2]   | rst_IBUF         |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | db3/button_flag_reg_3         | rst_IBUF         |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | lcd_inst/rs_i_1_n_0           | rst_IBUF         |                5 |              9 |         1.80 |
+|  clk_IBUF_BUFG | seg_0_data[3]_i_1_n_0         |                  |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | db0/price_to_pay              | rst_IBUF         |                5 |             12 |         2.40 |
+|  clk_IBUF_BUFG | unit[3]_i_1_n_0               | rst_IBUF         |               11 |             17 |         1.55 |
+|  clk_IBUF_BUFG | db0/counter0                  | rst_IBUF         |                4 |             20 |         5.00 |
+|  clk_IBUF_BUFG | db1/counter0                  | rst_IBUF         |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG | db2/counter0                  | rst_IBUF         |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG | db3/counter0                  | rst_IBUF         |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG | counter[29]_i_1_n_0           | rst_IBUF         |                9 |             30 |         3.33 |
+|  clk_IBUF_BUFG |                               | rst_IBUF         |               24 |             46 |         1.92 |
+|  clk_IBUF_BUFG | lcd_line1[126]_i_1_n_0        | rst_IBUF         |               64 |            141 |         2.20 |
++----------------+-------------------------------+------------------+------------------+----------------+--------------+
+
+

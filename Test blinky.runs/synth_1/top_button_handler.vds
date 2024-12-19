@@ -1,0 +1,428 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Dec 19 12:14:33 2024
+# Process ID: 752
+# Current directory: D:/Do_An_TKLL/Test LCD/Test blinky.runs/synth_1
+# Command line: vivado.exe -log top_button_handler.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_button_handler.tcl
+# Log file: D:/Do_An_TKLL/Test LCD/Test blinky.runs/synth_1/top_button_handler.vds
+# Journal file: D:/Do_An_TKLL/Test LCD/Test blinky.runs/synth_1\vivado.jou
+# Running On: DESKTOP-3I70GQ5, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 4, Host memory: 12610 MB
+#-----------------------------------------------------------
+source top_button_handler.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 449.602 ; gain = 160.598
+Command: read_checkpoint -auto_incremental -incremental {D:/Do_An_TKLL/Test LCD/Test blinky.srcs/utils_1/imports/synth_1/Blinky_ARTYZ7.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Do_An_TKLL/Test LCD/Test blinky.srcs/utils_1/imports/synth_1/Blinky_ARTYZ7.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_button_handler -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28844
+WARNING: [Synth 8-10929] literal value 'd1250000 truncated to fit in 20 bits [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/debounce_button.v:33]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1296.145 ; gain = 410.840
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_button_handler' [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'button_debounce' [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/debounce_button.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'button_debounce' (0#1) [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/debounce_button.v:23]
+INFO: [Synth 8-6157] synthesizing module 'LCD_display' [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/top_button_handler.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/top_button_handler.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'LCD_display' (0#1) [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/top_button_handler.v:3]
+WARNING: [Synth 8-689] width (2) of port connection 'flag_counter' does not match port width (1) of module 'LCD_display' [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:75]
+WARNING: [Synth 8-6090] variable 'lcd_line1' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:204]
+WARNING: [Synth 8-6090] variable 'lcd_line2' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:207]
+WARNING: [Synth 8-6090] variable 'lcd_line2' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:211]
+INFO: [Synth 8-6155] done synthesizing module 'top_button_handler' (0#1) [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:23]
+WARNING: [Synth 8-7137] Register money_reg in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:111]
+WARNING: [Synth 8-7137] Register price_reg[4] in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:112]
+WARNING: [Synth 8-7137] Register price_reg[3] in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:112]
+WARNING: [Synth 8-7137] Register price_reg[2] in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:112]
+WARNING: [Synth 8-7137] Register price_reg[1] in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:112]
+WARNING: [Synth 8-7137] Register price_reg[0] in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:112]
+WARNING: [Synth 8-7137] Register counter_reg in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:117]
+WARNING: [Synth 8-7137] Register flag_counter_reg in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:75]
+WARNING: [Synth 8-7137] Register product_count_current_reg in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:119]
+WARNING: [Synth 8-7137] Register price_to_pay_reg in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:120]
+WARNING: [Synth 8-7137] Register count_down_reg in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:121]
+WARNING: [Synth 8-7137] Register product_count_ready_reg[4] in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:125]
+WARNING: [Synth 8-7137] Register product_count_ready_reg[3] in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:125]
+WARNING: [Synth 8-7137] Register product_count_ready_reg[2] in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:125]
+WARNING: [Synth 8-7137] Register product_count_ready_reg[1] in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:125]
+WARNING: [Synth 8-7137] Register product_count_ready_reg[0] in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:125]
+WARNING: [Synth 8-7137] Register seg_0_data_reg in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:131]
+WARNING: [Synth 8-7137] Register seg_1_data_reg in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:132]
+WARNING: [Synth 8-7137] Register seg_2_data_reg in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:134]
+WARNING: [Synth 8-7137] Register seg_3_data_reg in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:135]
+WARNING: [Synth 8-7137] Register led_reg in module top_button_handler has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/sources_1/new/Top.v:149]
+WARNING: [Synth 8-7129] Port update in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_p[3] in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_p[2] in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_p[1] in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_p[0] in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port flag_counter in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port update_money in module top_button_handler is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1412.172 ; gain = 526.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1412.172 ; gain = 526.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1412.172 ; gain = 526.867
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1412.172 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/constrs_1/new/Arty-Z7-20-Master.xdc]
+Finished Parsing XDC File [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/constrs_1/new/Arty-Z7-20-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Do_An_TKLL/Test LCD/Test blinky.srcs/constrs_1/new/Arty-Z7-20-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_button_handler_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_button_handler_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1514.566 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1514.566 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1514.566 ; gain = 629.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1514.566 ; gain = 629.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1514.566 ; gain = 629.262
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'LCD_display'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                             0000 |                             0000
+              DISPLAY_ON |                             0001 |                             0001
+                CLEAR_ON |                             0010 |                             0010
+             SET_CURSOR1 |                             0011 |                             0011
+             WRITE_LINE1 |                             0100 |                             0100
+             SET_CURSOR2 |                             0101 |                             0101
+             WRITE_LINE2 |                             0110 |                             0110
+                    IDLE |                             0111 |                             0111
+            CHECK_UPDATE |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'LCD_display'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1514.566 ; gain = 629.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   30 Bit       Adders := 1     
+	   2 Input   28 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 4     
+	   3 Input    8 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 24    
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
+	               28 Bit    Registers := 1     
+	               20 Bit    Registers := 4     
+	                8 Bit    Registers := 18    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 6     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 13    
+	   3 Input  128 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 3     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   28 Bit        Muxes := 3     
+	   2 Input   20 Bit        Muxes := 8     
+	   9 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 157   
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   9 Input    4 Bit        Muxes := 2     
+	   6 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 9     
+	  10 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 6     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 52    
+	   5 Input    1 Bit        Muxes := 2     
+	   9 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port update in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_p[3] in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_p[2] in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_p[1] in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_p[0] in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port flag_counter in module LCD_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port update_money in module top_button_handler is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (led_reg[3]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (led_reg[3]_C) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (led_reg[2]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (led_reg[2]_C) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (led_reg[1]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (led_reg[1]_C) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (led_reg[0]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (led_reg[0]_C) is unused and will be removed from module top_button_handler.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1514.566 ; gain = 629.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1514.566 ; gain = 629.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:56 . Memory (MB): peak = 1555.273 ; gain = 669.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][7]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][7]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][6]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][6]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][5]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][5]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][4]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][4]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][3]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][3]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][2]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][2]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][1]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][1]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][0]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[4][0]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][7]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][7]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][6]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][6]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][5]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][5]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][4]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][4]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][3]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][3]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][2]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][2]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][1]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][1]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][0]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[3][0]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][7]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][7]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][6]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][6]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][5]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][5]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][4]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][4]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][3]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][3]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][2]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][2]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][1]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][1]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][0]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[2][0]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][7]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][7]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][6]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][6]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][5]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][5]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][4]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][4]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][3]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][3]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][2]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][2]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][1]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][1]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][0]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[1][0]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][7]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][7]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][6]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][6]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][5]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][5]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][4]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][4]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][3]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][3]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][2]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][2]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][1]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][1]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][0]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_ready_reg[0][0]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[7]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[7]_C) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[7]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[6]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[6]_C) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[6]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[5]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[5]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[4]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[4]_P) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[3]_LDC) is unused and will be removed from module top_button_handler.
+WARNING: [Synth 8-3332] Sequential element (product_count_current_reg[3]_P) is unused and will be removed from module top_button_handler.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:57 . Memory (MB): peak = 1565.281 ; gain = 679.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 1565.281 ; gain = 679.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 1565.281 ; gain = 679.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 1565.281 ; gain = 679.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 1565.281 ; gain = 679.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 1565.281 ; gain = 679.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 1565.281 ; gain = 679.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    87|
+|3     |LUT1   |    27|
+|4     |LUT2   |   163|
+|5     |LUT3   |    72|
+|6     |LUT4   |   216|
+|7     |LUT5   |   171|
+|8     |LUT6   |   432|
+|9     |MUXF7  |    19|
+|10    |MUXF8  |     5|
+|11    |FDCE   |   413|
+|12    |FDPE   |    12|
+|13    |FDRE   |    21|
+|14    |IBUF   |    11|
+|15    |OBUF   |    31|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 1565.281 ; gain = 679.977
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 148 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 1565.281 ; gain = 577.582
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 1565.281 ; gain = 679.977
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1568.148 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 111 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1579.016 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 1bac1b9c
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 141 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:09 . Memory (MB): peak = 1579.016 ; gain = 1105.531
+INFO: [Common 17-1381] The checkpoint 'D:/Do_An_TKLL/Test LCD/Test blinky.runs/synth_1/top_button_handler.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_button_handler_utilization_synth.rpt -pb top_button_handler_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 19 12:15:51 2024...

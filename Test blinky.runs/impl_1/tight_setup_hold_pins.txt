@@ -1,0 +1,57 @@
++====================+===================+===================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                               |
++====================+===================+===================================+
+| sys_clk_pin        | sys_clk_pin       | count_down_reg[1]/D               |
+| sys_clk_pin        | sys_clk_pin       | count_down_reg[6]/D               |
+| sys_clk_pin        | sys_clk_pin       | count_down_reg[3]/D               |
+| sys_clk_pin        | sys_clk_pin       | count_down_reg[4]/D               |
+| sys_clk_pin        | sys_clk_pin       | count_down_reg[7]/D               |
+| sys_clk_pin        | sys_clk_pin       | lcd_line2_reg[3]/D                |
+| sys_clk_pin        | sys_clk_pin       | price_to_pay_reg[5]_C/D           |
+| sys_clk_pin        | sys_clk_pin       | lcd_line1_reg[73]/D               |
+| sys_clk_pin        | sys_clk_pin       | price_to_pay_reg[0]_C/D           |
+| sys_clk_pin        | sys_clk_pin       | product_count_current_reg[2]_C/D  |
+| sys_clk_pin        | sys_clk_pin       | price_to_pay_reg[4]_C/D           |
+| sys_clk_pin        | sys_clk_pin       | price_to_pay_reg[3]_C/D           |
+| sys_clk_pin        | sys_clk_pin       | price_to_pay_reg[2]_C/D           |
+| sys_clk_pin        | sys_clk_pin       | lcd_line2_reg[1]/D                |
+| sys_clk_pin        | sys_clk_pin       | product_count_current_reg[3]_C/D  |
+| sys_clk_pin        | sys_clk_pin       | price_to_pay_reg[6]_C/D           |
+| sys_clk_pin        | sys_clk_pin       | product_count_current_reg[1]_C/D  |
+| sys_clk_pin        | sys_clk_pin       | price_to_pay_reg[7]_C/D           |
+| sys_clk_pin        | sys_clk_pin       | lcd_line2_reg[0]/D                |
+| sys_clk_pin        | sys_clk_pin       | product_count_current_reg[0]_C/D  |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[1][6]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[1][7]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[4][5]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[4][0]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[0][6]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[1][4]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[4][1]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[4][7]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[1][5]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[0][4]_C/D |
+| sys_clk_pin        | sys_clk_pin       | unit_reg[1]/D                     |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[2][6]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[4][2]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[3][6]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[3][3]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[3][1]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[0][7]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[2][7]_C/D |
+| sys_clk_pin        | sys_clk_pin       | flag_counter_reg[0]/D             |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[3][2]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[3][4]_C/D |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[3][7]_C/D |
+| sys_clk_pin        | sys_clk_pin       | dozen_reg[1]/D                    |
+| sys_clk_pin        | sys_clk_pin       | dozen_reg[2]/D                    |
+| sys_clk_pin        | sys_clk_pin       | product_count_ready_reg[0][0]_C/D |
+| sys_clk_pin        | sys_clk_pin       | dozen_reg[3]/D                    |
+| sys_clk_pin        | sys_clk_pin       | dozen_reg[0]/D                    |
+| sys_clk_pin        | sys_clk_pin       | unit_reg[0]/D                     |
+| sys_clk_pin        | sys_clk_pin       | money_reg[6]_C/D                  |
+| sys_clk_pin        | sys_clk_pin       | money_reg[7]_C/D                  |
+| sys_clk_pin        | sys_clk_pin       | money_reg[5]_C/D                  |
+| sys_clk_pin        | sys_clk_pin       | money_reg[4]_C/D                  |
+| sys_clk_pin        | sys_clk_pin       | money_reg[2]_C/D                  |
++--------------------+-------------------+-----------------------------------+
